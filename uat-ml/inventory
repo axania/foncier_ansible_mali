@@ -1,10 +1,10 @@
 ---
 
-worker01 ansible_ssh_host=uat-ml-fon-worker01.az.sogema.local
-worker02 ansible_ssh_host=uat-ml-fon-worker02.az.sogema.local
-worker03 ansible_ssh_host=uat-ml-fon-worker03.az.sogema.local
-postgres01 ansible_ssh_host=uat-ml-fon-postgres01.az.sogema.local
-postgres02 ansible_ssh_host=uat-ml-fon-postgres02.az.sogema.local
+worker01 ansible_ssh_host=
+worker02 ansible_ssh_host=
+worker03 ansible_ssh_host=
+postgres01 ansible_ssh_host=
+postgres02 ansible_ssh_host=
 
 [docker]
 worker01

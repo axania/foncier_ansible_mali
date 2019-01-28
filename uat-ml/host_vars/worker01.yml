@@ -1,6 +1,6 @@
 ---
 
-full_hostname: pp-ml-fon-worker01.az.sogema.local
+full_hostname: 
 
 # Feature flags - stuff we want to be present
 jenkins_slave_node: False
@@ -12,5 +12,4 @@ available_docker_services:
   - foncier-ui 
   - foncier-api
   - foncier-wf
-  - postgres  
   - datadog
