@@ -67,8 +67,8 @@ rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/vali
 rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://a-v-db-fo-001.dndc.intranet:8080/auth"
-keycloak_realm: "TR-ML Foncier"
+keycloak_auth_server_url: "http://a-v-wt-fo-001.dndc.intranet:8080/auth"
+keycloak_realm: "FOR-SITFI"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration
