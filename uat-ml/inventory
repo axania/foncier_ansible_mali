@@ -1,8 +1,8 @@
 ---
 
-worker01 ansible_ssh_host=a-v-db-fo-001.dndc.intranet
-worker02 ansible_ssh_host=a-v-db-fo-002.dndc.intranet
-worker03 ansible_ssh_host=a-v-db-fo-003.dndc.intranet
+worker01 ansible_ssh_host=a-v-wt-fo-001.dndc.intranet
+worker02 ansible_ssh_host=a-v-wt-fo-002.dndc.intranet
+worker03 ansible_ssh_host=a-v-wt-fo-003.dndc.intranet
 data01 ansible_ssh_host=a-v-db-fo-001.dndc.intranet
 data02 ansible_ssh_host=a-v-db-fo-002.dndc.intranet
 report01 ansible_ssh_host=a-v-rt-fo-001.dndc.intranet
