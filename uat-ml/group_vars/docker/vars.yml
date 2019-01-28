@@ -29,7 +29,7 @@ db_port: 5432
 
 db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
-db_name: ladm
+db_name: sogema
 
 #camunda 
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
@@ -38,11 +38,11 @@ camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 edms_user: "foncier@sogematech.com"
 edms_password: "{{ vault_edms_password }}"
 edms_domain: "stisystems.sharepoint.com"
-edms_source: "SHAREPOINT"
+edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocuments"
-edms_sharepoint_site: "/sites/dev.foncier"
+edms_server_base_folder: "/sites/uat.foncier/Documents partages/foncierEdmsDocuments"
+edms_sharepoint_site: "/sites/uat.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
 edms_alfresco_site: "foncier"
 edms_alfresco_folder: "/foncierEdmsDocuments"
@@ -51,14 +51,14 @@ edms_alfresco_container: "documentLibrary"
 #mail - environment
 mail_host: "smtp.gmail.com"
 mail_port: "587"
-mail_username: "sti.foncier@gmail.com"
+mail_username: "dnd.uat.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
 
-rules_base_url: "http://uat-ml-fon-worker02.az.sogema.local:8082/foncier-rules-api/api/"
+rules_base_url: "http://a-v-db-fo-002.az.sogema.local:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
@@ -67,8 +67,8 @@ rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/vali
 rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://uat-ml-keycloak01.az.sogema.local:8080/auth"
-keycloak_realm: "PP-ML Foncier"
+keycloak_auth_server_url: "http://a-v-db-fo-001.dndc.intranet:8080/auth"
+keycloak_realm: "UAT-ML Foncier"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration
@@ -88,7 +88,7 @@ mali_folios_per_volume: "200"
 
 #foncier rules api
 drools_workbench_user: "admin"
-drools_workbench_pass: "admin"
+drools_workbench_pass: "o3X7h332R$?{*#8iWA"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
@@ -96,18 +96,11 @@ etc_save_hosts:
 
 # /etc/resolv.conf values
 dns_resolv_searchpath:
-  - 'az.sogema.local'
-  - 'sogema.local' 
-  - 'sogema.ca'
-  - 'reddog.microsoft.com'
+  - 'dndc.intranet'
 
 dns_server_list:
-  - 192.168.0.70
-  - 192.168.1.236
-  - 8.8.8.8
-  - 8.8.4.4
-  - 208.67.222.222
-
+  - 10.250.29.3
+  - 10.250.29.4
 
 #Docker logs filebeat vars
 docker_log_path: "/var/lib/docker/containers/*/*.log"

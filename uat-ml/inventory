@@ -1,20 +1,25 @@
 ---
 
-worker01 ansible_ssh_host=
-worker02 ansible_ssh_host=
-worker03 ansible_ssh_host=
-postgres01 ansible_ssh_host=
-postgres02 ansible_ssh_host=
+worker01 ansible_ssh_host=a-v-db-fo-001.dndc.intranet
+worker02 ansible_ssh_host=a-v-db-fo-002.dndc.intranet
+worker03 ansible_ssh_host=a-v-db-fo-003.dndc.intranet
+data01 ansible_ssh_host=a-v-db-fo-001.dndc.intranet
+data02 ansible_ssh_host=a-v-db-fo-002.dndc.intranet
+report01 ansible_ssh_host=a-v-rt-fo-001.dndc.intranet
+report02 ansible_ssh_host=a-v-rt-fo-002.dndc.intranet
+jenkins01 ansible_ssh_host=a-v-dt-pr-001.dndc.intranet
 
 [docker]
 worker01
 worker02
 worker03
-postgres01
-postgres02
+data01
+data02
+report01
+report02
 
 [jenkins]
-worker01
+jenkins01
 
 [datacenter:children]
 docker
