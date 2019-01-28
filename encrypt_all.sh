@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a env=("uat-ml")
+declare -a env=("tr-ml")
 declare -a group=("all" "docker" )
 
 ## now loop through the above array

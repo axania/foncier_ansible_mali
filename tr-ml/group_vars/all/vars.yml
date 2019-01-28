@@ -1,6 +1,6 @@
 ---
 
-environment_name: uat-ml
+environment_name: tr-ml
 ansible_ssh_user: "{{ vault_ansible_ssh_user }}"
 ansible_ssh_pass: "{{ vault_ansible_ssh_pass }}"
 

@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "uat-ml-fon-worker01.az.sogema.local"
+db_host: "tr-ml-fon-worker01.az.sogema.local"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -41,8 +41,8 @@ edms_domain: "stisystems.sharepoint.com"
 edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/uat.foncier/Documents partages/foncierEdmsDocuments"
-edms_sharepoint_site: "/sites/uat.foncier"
+edms_server_base_folder: "/sites/tr.foncier/Documents partages/foncierEdmsDocuments"
+edms_sharepoint_site: "/sites/tr.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
 edms_alfresco_site: "foncier"
 edms_alfresco_folder: "/foncierEdmsDocuments"
@@ -51,7 +51,7 @@ edms_alfresco_container: "documentLibrary"
 #mail - environment
 mail_host: "smtp.gmail.com"
 mail_port: "587"
-mail_username: "dnd.uat.foncier@gmail.com"
+mail_username: "dnd.tr.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
@@ -68,7 +68,7 @@ rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/val
 
 #keycloak - environment
 keycloak_auth_server_url: "http://a-v-db-fo-001.dndc.intranet:8080/auth"
-keycloak_realm: "UAT-ML Foncier"
+keycloak_realm: "TR-ML Foncier"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration

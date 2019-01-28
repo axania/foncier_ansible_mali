@@ -9,7 +9,7 @@
 
 ### Contents ###
 
-* UAT-ML
+* TR-ML
 
 ### How do I get set up? ###
 
