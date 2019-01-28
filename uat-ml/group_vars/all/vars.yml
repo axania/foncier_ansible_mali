@@ -11,31 +11,19 @@ dd_process_agent_enabled: True
 dd_key: "{{ vault_dd_key }}"
 
 #Host Timezone 
-timezone: America/Montreal
-
+timezone: Africa/Bamako
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
       ip: 127.0.0.1
 
-
 # /etc/resolv.conf values
 dns_resolv_searchpath:
-  - 'az.sogema.local'
-  - 'sogema.local' 
-  - 'sogema.ca'
-  - 'reddog.microsoft.com'
+  - 'dndc.intranet'
 
 dns_server_list:
-  - 192.168.0.70
-  - 192.168.1.236
-  - 8.8.8.8
-  - 8.8.4.4
-  - 208.67.222.222      
-
+  - 10.250.29.3
+  - 10.250.29.4
 
 # Logstash in Filebeat configuration
-logstash_ip_port: "10.10.0.120:5044"
-
-
-  
+logstash_ip_port: ""

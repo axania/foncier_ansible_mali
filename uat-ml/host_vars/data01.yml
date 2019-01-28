@@ -1,6 +1,6 @@
 ---
 
-full_hostname: a-v-db-fo-002.dndc.intranet
+full_hostname: a-v-db-fo-001.dndc.intranet
 
 # Feature flags - stuff we want to be present
 jenkins_slave_node: False
@@ -9,6 +9,5 @@ is_maven_server: False
 is_sonar_enabled: False
 
 available_docker_services:
+  - postgres  
   - datadog
-  - foncier-rules-api
-  
