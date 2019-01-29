@@ -9,8 +9,8 @@ is_maven_server: False
 is_sonar_enabled: False
 
 available_docker_services:
-  - datadog
   - alfresco
   - share-alfresco
   - postgres-alfresco
   - solr6-alfresco
+  - datadog

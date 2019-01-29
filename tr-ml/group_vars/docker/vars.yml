@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "a-v-ec-fo-001.dndc.intranet"
+db_host: "a-v-db-fo-001.dndc.intranet"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
