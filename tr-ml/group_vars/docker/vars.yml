@@ -58,7 +58,7 @@ mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
 
-rules_base_url: "http://a-v-ec-fo-002.dndc.intranet:8082/foncier-rules-api/api/"
+rules_base_url: "http://a-v-wt-fo-002.dndc.intranet:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
