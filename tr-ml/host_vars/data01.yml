@@ -10,3 +10,4 @@ is_sonar_enabled: False
 
 available_docker_services:
   - datadog
+  #- foncier-db 

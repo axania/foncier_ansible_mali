@@ -10,6 +10,5 @@ is_sonar_enabled: False
 
 available_docker_services:
   - foncier-rules-api
-  - postgres  
+  - foncier-db
   - datadog
-  
