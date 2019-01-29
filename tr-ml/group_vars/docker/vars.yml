@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "tr-ml-fon-worker01.az.sogema.local"
+db_host: "a-v-ec-fo-001.dndc.intranet"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -51,14 +51,14 @@ edms_alfresco_container: "documentLibrary"
 #mail - environment
 mail_host: "smtp.gmail.com"
 mail_port: "587"
-mail_username: "dnd.tr.foncier@gmail.com"
+mail_username: "dnd.uat.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
 
-rules_base_url: "http://a-v-db-fo-002.az.sogema.local:8082/foncier-rules-api/api/"
+rules_base_url: "http://a-v-ec-fo-002.dndc.intranet:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
@@ -88,7 +88,7 @@ mali_folios_per_volume: "200"
 
 #foncier rules api
 drools_workbench_user: "admin"
-drools_workbench_pass: "o3X7h332R$?{*#8iWA"
+drools_workbench_pass: "ARB8t36cV6n9vKdfZ4"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
