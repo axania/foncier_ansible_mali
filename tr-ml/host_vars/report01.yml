@@ -1,6 +1,6 @@
 ---
 
-full_hostname: a-v-rt-fo-001.dndc.intranet
+full_hostname: A-V-RT-FO-001.dndc.intranet
 
 # Feature flags - stuff we want to be present
 jenkins_slave_node: False

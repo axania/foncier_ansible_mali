@@ -24,6 +24,8 @@ dns_resolv_searchpath:
 dns_server_list:
   - 10.250.29.3
   - 10.250.29.4
+  - 8.8.8.8
+  - 8.8.4.4
 
 # Logstash in Filebeat configuration
 logstash_ip_port: ""

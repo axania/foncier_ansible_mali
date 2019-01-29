@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "a-v-db-fo-001.dndc.intranet"
+db_host: "A-V-DB-FO-001.dndc.intranet"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -58,7 +58,7 @@ mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
 
-rules_base_url: "http://a-v-wt-fo-002.dndc.intranet:8082/foncier-rules-api/api/"
+rules_base_url: "http://A-V-WT-FO-002.dndc.intranet:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
@@ -67,7 +67,7 @@ rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/vali
 rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://a-v-wt-fo-001.dndc.intranet:8080/auth"
+keycloak_auth_server_url: "http://A-V-WT-FO-001.dndc.intranet:8080/auth"
 keycloak_realm: "FOR-SITFI"
 keycloak_ssl_required: "external"
 
@@ -101,6 +101,8 @@ dns_resolv_searchpath:
 dns_server_list:
   - 10.250.29.3
   - 10.250.29.4
+  - 8.8.8.8
+  - 8.8.4.4
 
 #Docker logs filebeat vars
 docker_log_path: "/var/lib/docker/containers/*/*.log"
