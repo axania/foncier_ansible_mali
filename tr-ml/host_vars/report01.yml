@@ -8,6 +8,5 @@ node_installed: False #we build in the VM too
 is_maven_server: False
 is_sonar_enabled: False
 
-available_docker_services:
-  - postgres  
+available_docker_services: 
   - datadog
