@@ -20,7 +20,7 @@ foncier_rules_api_image_version: latest
 is_swarm_mode_enabled: False
 is_datadog_on_docker: True
 is_docker_prospector_enabled: True
-is_foncier_rules_api_enabled: True
+is_foncier_rules_api_enabled: False
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
@@ -35,14 +35,14 @@ db_name: sogema
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 
 #edms - environment
-edms_user: "foncier@sogematech.com"
+edms_user: "for-sitfi@dndc.intranet"
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "stisystems.sharepoint.com"
+edms_domain: "a-v-wt-fo-003.dndc.intranet:8380"
 edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/tr.foncier/Documents partages/foncierEdmsDocuments"
-edms_sharepoint_site: "/sites/tr.foncier"
+edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocuments"
+edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
 edms_alfresco_site: "foncier"
 edms_alfresco_folder: "/foncierEdmsDocuments"
@@ -51,7 +51,7 @@ edms_alfresco_container: "documentLibrary"
 #mail - environment
 mail_host: "smtp.gmail.com"
 mail_port: "587"
-mail_username: "dnd.uat.foncier@gmail.com"
+mail_username: "sti.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
@@ -67,8 +67,8 @@ rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/vali
 rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://A-V-WT-FO-001.dndc.intranet:8080/auth"
-keycloak_realm: "FOR-SITFI"
+keycloak_auth_server_url: "http://a-v-wt-fo-001.dndc.intranet:8080/auth"
+keycloak_realm: "FOR SITFI"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration

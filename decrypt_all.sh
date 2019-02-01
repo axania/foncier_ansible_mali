@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare -a env=("tr-ml")
-declare -a group=("all" "docker" )
+declare -a group=("all" "docker" "alfresco" )
 
 ## now loop through the above array
 for i in "${env[@]}"

@@ -1,20 +1,20 @@
 ---
 
-worker01 ansible_ssh_host=A-V-WT-FO-001.dndc.intranet
-worker02 ansible_ssh_host=A-V-WT-FO-002.dndc.intranet
-worker03 ansible_ssh_host=A-V-WT-FO-003.dndc.intranet
-data01 ansible_ssh_host=A-V-DB-FO-001.dndc.intranet
-#report01 ansible_ssh_host=A-V-RT-FO-001.dndc.intranet
-#report02 ansible_ssh_host=A-V-RT-FO-002.dndc.intranet
-jenkins01 ansible_ssh_host=A-V-DT-PR-001.dndc.intranet
+worker01 ansible_ssh_host=a-v-wt-fo-001.dndc.intranet
+worker02 ansible_ssh_host=a-v-wt-fo-002.dndc.intranet
+worker03 ansible_ssh_host=a-v-wt-fo-003.dndc.intranet
+data01 ansible_ssh_host=a-v-db-fo-001.dndc.intranet
+#report01 ansible_ssh_host=a-v-rt-fo-001.dndc.intranet
+#report02 ansible_ssh_host=a-v-rt-fo-002.dndc.intranet
+jenkins01 ansible_ssh_host=a-v-dt-pr-001.dndc.intranet
 
 [docker]
 worker01
 worker02
-worker03
 data01
-#report01
-#report02
+
+[alfresco]
+worker03
 
 [jenkins]
 jenkins01

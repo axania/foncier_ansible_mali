@@ -1,0 +1,66 @@
+---
+
+#Docker Installed version
+docker_compose_version: 1.21.2
+docker_ce_version: 18.03.1~ce-0~ubuntu
+
+docker_registry: "{{ vault_docker_registry }}"
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
+
+#Docker Containers Deployed
+
+#Feature Flags
+is_swarm_mode_enabled: False
+is_datadog_on_docker: True
+is_docker_prospector_enabled: True
+pull_images: yes
+
+
+#Alfresco Vars
+edms_host: http://a-v-wt-fo-003.dndc.intranet:8380
+
+share_host: a-v-wt-fo-003.dndc.intranet
+
+edms_user_first_name: "SITFI"
+edms_user_last_name: "Admin"
+
+edms_admin_user: "admin"
+edms_admin_password: "admin"
+
+edms_user: "for-sitfi@dndc.intranet"
+edms_user_role: "SiteManager"
+edms_password: "{{ vault_edms_password }}"
+
+edms_site_id: foncier
+edms_site_title: Formation SITFI
+edms_site_description: "Formation SITFI"
+edms_alfresco_folder: foncierEdmsDocuments
+
+
+etc_save_hosts:
+    - name: "{{ ansible_ssh_host }}"
+      ip: 127.0.0.1
+
+# /etc/resolv.conf values
+dns_resolv_searchpath:
+  - 'az.sogema.local'
+  - 'sogema.local' 
+  - 'sogema.ca'
+  - 'reddog.microsoft.com'
+
+dns_server_list:
+  - 192.168.0.70
+  - 192.168.1.236
+  - 8.8.8.8
+  - 8.8.4.4
+  - 208.67.222.222
+
+
+#Docker logs filebeat vars
+docker_log_path: "/var/lib/docker/containers/*/*.log"
+docker_conatiner_log_name: "fon"
+
+#System logs filebeat vars:
+system_log_path: "/var/log/*.log"
