@@ -49,14 +49,16 @@ edms_alfresco_folder: "/foncierEdmsDocuments"
 edms_alfresco_container: "documentLibrary"
 
 #mail - environment
-mail_host: "smtp.gmail.com"
+mail_host: "smtp.sendgrid.net"
 mail_port: "587"
-mail_username: "sti.foncier@gmail.com"
+mail_username: "apikey"
+mail_from: "sitfi@sitfi.dndc.gouv.ml"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
+mail_debug: "true"
 
 rules_base_url: "http://A-V-WT-FO-002.dndc.intranet:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
@@ -68,7 +70,7 @@ rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/val
 
 #keycloak - environment
 keycloak_auth_server_url: "http://a-v-wt-fo-001.dndc.intranet:8080/auth"
-keycloak_realm: "FOR SITFI"
+keycloak_realm: "forsitfi"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration
