@@ -12,7 +12,7 @@ docker_email: "jenkins@sti.systems"
 #Docker Containers Deployed
 pull_images: yes #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)
 foncier_ui_image_version: dev
-foncier_api_image_version: latest
+foncier_api_image_version: dev
 foncier_wf_image_version: "7.8.13-ee"
 foncier_rules_api_image_version: latest
 
@@ -35,8 +35,8 @@ db_name: sogema
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 
 #edms - environment
-edms_user: "for-sitfi@dndc.intranet"
-edms_password: "{{ vault_edms_password }}"
+edms_user: "admin"
+edms_password: "admin"
 edms_domain: "a-v-wt-fo-003.dndc.intranet:8380"
 edms_source: "ALFRESCO"
 edms_enabled: 'true'
@@ -50,14 +50,14 @@ edms_alfresco_container: "documentLibrary"
 
 #mail - environment
 mail_host: "smtp.sendgrid.net"
-mail_port: "587"
+mail_port: "465"
 mail_username: "apikey"
 mail_from: "sitfi@sitfi.dndc.gouv.ml"
 mail_password: "{{ vault_mail_password }}"
-mail_protocol: "smtp"
+mail_protocol: "smtps"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
-mail_tls_enabled: "true"
+mail_tls_enabled: "false"
 mail_debug: "true"
 
 rules_base_url: "http://A-V-WT-FO-002.dndc.intranet:8082/foncier-rules-api/api/"
