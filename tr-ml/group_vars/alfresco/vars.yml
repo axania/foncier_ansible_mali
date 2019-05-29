@@ -2,7 +2,7 @@
 
 #Docker Installed version
 docker_compose_version: 1.21.2
-docker_ce_version: 18.03.1~ce-0~ubuntu
+docker_ce_version: 18.06.3~ce~3-0~ubuntu
 
 docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
@@ -21,6 +21,8 @@ pull_images: yes
 #Alfresco Vars
 edms_host: http://a-v-wt-fo-003.dndc.intranet:8380
 
+edms_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
+
 share_host: a-v-wt-fo-003.dndc.intranet
 
 edms_user_first_name: "SITFI"
@@ -38,6 +40,14 @@ edms_site_title: Formation SITFI
 edms_site_description: "Formation SITFI"
 edms_alfresco_folder: foncierEdmsDocuments
 
+alfresco_xms: 6g
+alfresco_xmx: 12g
+
+share_xms: 512m
+share_xmx: 2g
+
+solr_xms: 2g
+solr_xmx: 4g
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
@@ -45,17 +55,14 @@ etc_save_hosts:
 
 # /etc/resolv.conf values
 dns_resolv_searchpath:
-  - 'az.sogema.local'
-  - 'sogema.local' 
-  - 'sogema.ca'
-  - 'reddog.microsoft.com'
+  - 'dndc.intranet'
+
 
 dns_server_list:
-  - 192.168.0.70
-  - 192.168.1.236
+  - 10.250.29.3
+  - 10.250.29.4
   - 8.8.8.8
   - 8.8.4.4
-  - 208.67.222.222
 
 
 #Docker logs filebeat vars
