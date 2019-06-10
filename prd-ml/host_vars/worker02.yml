@@ -1,12 +1,13 @@
 ---
 
-full_hostname: a-v-wt-fo-002.dndc.intranet
+full_hostname: A-V-WT-PP-002.dndc.intranet
 
 # Feature flags - stuff we want to be present
 jenkins_slave_node: False
 node_installed: False #we build in the VM too
 is_maven_server: False
 is_sonar_enabled: False
+
 available_docker_services:
-  - foncier-rules-api
+  - foncier-api
   - datadog

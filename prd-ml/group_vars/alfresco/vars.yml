@@ -2,7 +2,7 @@
 
 #Docker Installed version
 docker_compose_version: 1.21.2
-docker_ce_version: 18.06.3~ce~3-0~ubuntu
+docker_ce_version: 18.03.1~ce-0~ubuntu
 
 docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
@@ -20,16 +20,16 @@ is_docker_prospector_enabled: False
 #Alfresco Vars
 edms_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
 
-edms_csrf_filter_origin: http://a-v-ec-fo-001.dndc.intranet
-edms_csrf_filter_referer: http://a-v-ec-fo-001.dndc.intranet/.*
+edms_csrf_filter_origin: https://sitfi.dndc.gouv.ml
+edms_csrf_filter_referer: https://sitfi.dndc.gouv.ml/.*
 
-alfresco_host: alfresco
-alfresco_port: 8080
+alfresco_host: a-v-et-pp-001.dndc.intranet
+alfresco_port: 8380
 
-alfresco_url: http://a-v-wt-fo-003.dndc.intranet:8380
+alfresco_url: http://{{ alfresco_host }}:{{ alfresco_port }}
 
-solr_host: alfresco-solr6
-solr_port: 8983
+solr_host: a-v-et-pp-002.dndc.intranet
+solr_port: 8083
 
 edms_user_first_name: "SITFI"
 edms_user_last_name: "Admin"
@@ -37,27 +37,27 @@ edms_user_last_name: "Admin"
 edms_admin_user: "admin"
 edms_admin_password: "{{ vault_edms_admin_password }}"
 
-edms_user: "for-sitfi@dndc.intranet"
+edms_user: "prd-sitfi@dndc.intranet"
 edms_user_role: "SiteManager"
 edms_password: "{{ vault_edms_password }}"
 
 edms_site_id: foncier
-edms_site_title: Formation SITFI
-edms_site_description: "Formation SITFI"
+edms_site_title: SITFI
+edms_site_description: "SITFI"
 edms_alfresco_folder: foncierEdmsDocuments
 
-edms_db_host: alfresco-db
-edms_db_port: 5432
-edms_db_pass: alfresco
+edms_db_host: a-v-db-pp-003.dndc.intranet
+edms_db_port: 5436
+edms_db_pass: "{{ vault_edms_db_pass }}"
 
-alfresco_xms: 6g
-alfresco_xmx: 12g
+alfresco_xms: 12g
+alfresco_xmx: 24g
 
 share_xms: 512m
 share_xmx: 2g
 
-solr_xms: 2g
-solr_xmx: 4g
+solr_xms: 6g
+solr_xmx: 12g
 
 
 etc_save_hosts:

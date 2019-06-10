@@ -15,6 +15,7 @@ foncier_ui_image_version: dev
 foncier_api_image_version: dev
 foncier_wf_image_version: "7.8.13-ee"
 foncier_rules_api_image_version: dev
+foncier_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
 
 #Feature Flags
 is_datadog_on_docker: True
@@ -23,7 +24,7 @@ is_docker_prospector_enabled: False
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "A-V-DB-FO-001.dndc.intranet"
+db_host: "A-V-DB-PP-001.dndc.intranet"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -31,18 +32,18 @@ db_pass: "{{ vault_db_pass }}"
 db_name: sogema
 
 #api
-api_host: foncier-api
+api_host: "A-V-WT-PP-002.dndc.intranet"
 api_port: 8280
 
-#camunda 
-camunda_host: foncier-wf
-camunda_port: 8080
-camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
+#camunda
+camunda_host: "A-V-WT-PP-007.dndc.intranet"
+camunda_port: 8581
+camunda_enginerest_url: "http://a-v-wt-pp-001.dndc.intranet:4200/workflowApi/engine-rest/"
 
 #edms - environment
-edms_user: "for-sitfi@dndc.intranet"
+edms_user: "prd-sitfi@dndc.intranet"
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "a-v-wt-fo-003.dndc.intranet:8380"
+edms_domain: "a-v-et-pp-001.dndc.intranet:8380"
 edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
@@ -66,7 +67,7 @@ mail_smtp_auth_enabled: 'false'
 mail_tls_enabled: "false"
 mail_debug: "false"
 
-rules_base_url: "http://A-V-WT-FO-002.dndc.intranet:8082/foncier-rules-api/api/"
+rules_base_url: "http://A-V-WT-PP-008.dndc.intranet:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
@@ -75,8 +76,8 @@ rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/vali
 rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://a-v-ec-fo-001.dndc.intranet/auth"
-keycloak_realm: "forsitfi"
+keycloak_auth_server_url: "http://a-v-ec-pp-001.dndc.intranet/auth"
+keycloak_realm: "prdsitfi"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration
@@ -100,7 +101,7 @@ mali_folios_per_volume: "200"
 drools_workbench_user: "admin"
 drools_workbench_pass: "{{ vault_drools_workbench_pass }}"
 
-logs_level: "INFO"
+logs_level: "WARN"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
