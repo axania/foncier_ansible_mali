@@ -10,9 +10,9 @@ docker_pwd: "{{ vault_docker_pwd }}"
 docker_email: "jenkins@sti.systems"
 
 #Docker Containers Deployed
-pull_images: no #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)
-foncier_ui_image_version: dev
-foncier_api_image_version: dev
+pull_images: no
+foncier_ui_image_version: 0.17.3
+foncier_api_image_version: 0.17.3
 foncier_wf_image_version: "7.8.13-ee"
 foncier_rules_api_image_version: dev
 foncier_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
@@ -101,7 +101,11 @@ mali_folios_per_volume: "200"
 drools_workbench_user: "admin"
 drools_workbench_pass: "{{ vault_drools_workbench_pass }}"
 
-logs_level: "WARN"
+logs_level: "INFO"
+hibernate_show_sql: 'false'
+hibernate_logs: "INFO"
+keycloak_logs: "INFO"
+spring_logs: "INFO"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
