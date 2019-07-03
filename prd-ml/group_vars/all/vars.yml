@@ -10,6 +10,16 @@ datadog_installed: True
 dd_process_agent_enabled: True
 dd_key: "{{ vault_dd_key }}"
 
+#Backups
+backup_server_host: a-v-bk-pp-001.dndc.intranet
+backup_allowed_subnet: 10.250.29.0/24
+backup_server_folder: /u01
+backup_client_folder: /mnt/backups
+backup_schedule: "@daily"
+backup_keep_days: 3
+backup_keep_weeks: 4
+backup_keep_months: 1
+
 #Host Timezone 
 timezone: Africa/Bamako
 

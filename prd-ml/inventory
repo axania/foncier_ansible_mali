@@ -1,5 +1,6 @@
 ---
 
+bk01 ansible_ssh_host=a-v-bk-pp-001.dndc.intranet
 lb01 ansible_ssh_host=A-V-EC-PP-001.dndc.intranet
 lb02 ansible_ssh_host=A-V-EC-PP-002.dndc.intranet
 worker01 ansible_ssh_host=A-V-WT-PP-001.dndc.intranet
@@ -19,6 +20,9 @@ data01 ansible_ssh_host=A-V-DB-PP-001.dndc.intranet
 data03 ansible_ssh_host=A-V-DB-PP-003.dndc.intranet
 #data04 ansible_ssh_host=A-V-DB-PP-004.dndc.intranet
 
+[backup]
+bk01
+
 [docker]
 worker01
 worker02
@@ -36,6 +40,7 @@ lb01
 lb02
 
 [datacenter:children]
+backup
 docker
 alfresco
 haproxy
