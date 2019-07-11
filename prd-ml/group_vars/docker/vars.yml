@@ -107,6 +107,11 @@ hibernate_logs: "INFO"
 keycloak_logs: "INFO"
 spring_logs: "INFO"
 
+#swagger
+swagger_username: "superuser"
+swagger_password: "Test1234"
+swagger_role: "USER"
+
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
       ip: 127.0.0.1
