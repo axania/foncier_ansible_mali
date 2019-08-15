@@ -11,9 +11,9 @@ docker_email: "jenkins@sti.systems"
 
 #Docker Containers Deployed
 pull_images: no
-foncier_ui_image_version: 0.17.3
-foncier_api_image_version: 0.17.3
-foncier_wf_image_version: "7.8.13-ee"
+foncier_ui_image_version: 0.20.0
+foncier_api_image_version: 0.20.0
+foncier_wf_image_version: "7.8.13-ee-sogema"
 foncier_rules_api_image_version: dev
 
 #Feature Flags
