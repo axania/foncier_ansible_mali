@@ -100,11 +100,11 @@ mali_folios_per_volume: "200"
 drools_workbench_user: "admin"
 drools_workbench_pass: "{{ vault_drools_workbench_pass }}"
 
-logs_level: "INFO"
+logs_level: "DEBUG"
 hibernate_show_sql: 'false'
 hibernate_logs: "INFO"
-keycloak_logs: "INFO"
-spring_logs: "INFO"
+keycloak_logs: "DEBUG"
+spring_logs: "DEBUG"
 
 #swagger
 swagger_username: "superuser"
