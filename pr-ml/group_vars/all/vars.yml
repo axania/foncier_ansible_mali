@@ -1,0 +1,31 @@
+---
+
+environment_name: pr-ml-fon
+ansible_ssh_user: "{{ vault_ansible_ssh_user }}"
+ansible_ssh_pass: "{{ vault_ansible_ssh_pass }}"
+
+#from Datadog role variables
+dd_enabled: yes
+datadog_installed: True
+dd_process_agent_enabled: True
+dd_key: "{{ vault_dd_key }}"
+
+#Host Timezone 
+timezone: Africa/Bamako
+
+etc_save_hosts:
+    - name: "{{ ansible_ssh_host }}"
+      ip: 127.0.0.1
+
+# /etc/resolv.conf values
+dns_resolv_searchpath:
+  - 'dndc.intranet'
+
+dns_server_list:
+  - 10.250.29.3
+  - 10.250.29.4
+  - 8.8.8.8
+  - 8.8.4.4
+
+# Logstash in Filebeat configuration
+logstash_ip_port: ""

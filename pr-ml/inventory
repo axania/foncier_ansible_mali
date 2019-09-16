@@ -1,0 +1,43 @@
+---
+
+lb01 ansible_ssh_host=A-V-EC-PR-001.dndc.intranet
+worker01 ansible_ssh_host=A-V-WT-PR-001.dndc.intranet
+worker02 ansible_ssh_host=A-V-WT-PR-002.dndc.intranet
+#worker03 ansible_ssh_host=A-V-WT-PR-003.dndc.intranet
+#worker04 ansible_ssh_host=A-V-WT-PR-004.dndc.intranet
+#worker05 ansible_ssh_host=A-V-WT-PR-005.dndc.intranet
+#worker06 ansible_ssh_host=A-V-WT-PR-006.dndc.intranet
+worker07 ansible_ssh_host=A-V-WT-PR-007.dndc.intranet
+worker08 ansible_ssh_host=A-V-WT-PR-008.dndc.intranet
+#worker09 ansible_ssh_host=A-V-WT-PR-009.dndc.intranet
+ged01 ansible_ssh_host=A-V-ET-PR-001.dndc.intranet
+ged02 ansible_ssh_host=A-V-ET-PR-002.dndc.intranet
+data01 ansible_ssh_host=A-V-DB-PR-001.dndc.intranet
+#data02 ansible_ssh_host=A-V-DB-PR-002.dndc.intranet
+data03 ansible_ssh_host=A-V-DB-PR-003.dndc.intranet
+#data04 ansible_ssh_host=A-V-DB-PR-004.dndc.intranet
+
+[docker]
+worker01
+worker02
+worker07
+worker08
+data01
+
+[alfresco]
+ged01
+ged02
+data03
+
+[haproxy]
+lb01
+
+[datacenter:children]
+docker
+alfresco
+haproxy
+
+[datacenter:vars]
+ansible_ssh_user={{vault_ansible_ssh_user}}
+ansible_ssh_pass={{vault_ansible_ssh_pass}}
+

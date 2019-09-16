@@ -1,0 +1,13 @@
+---
+
+full_hostname: A-V-EC-PR-001.dndc.intranet
+
+# Feature flags - stuff we want to be present
+jenkins_slave_node: False
+node_installed: False #we build in the VM too
+is_maven_server: False
+is_sonar_enabled: False
+
+available_docker_services:
+  - haproxy
+  - datadog

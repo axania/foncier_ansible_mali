@@ -1,0 +1,84 @@
+---
+
+#Docker Installed version
+docker_compose_version: 1.21.2
+docker_ce_version: 18.03.1~ce-0~ubuntu
+
+docker_registry: "{{ vault_docker_registry }}"
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
+
+#Docker Containers Deployed
+pull_images: no
+
+#Feature Flags
+is_datadog_on_docker: True
+is_swarm_mode_enabled: False
+is_docker_prospector_enabled: False
+
+#Alfresco Vars
+edms_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
+
+edms_csrf_filter_origin: https://pr-modonum.dndc.gouv.ml
+edms_csrf_filter_referer: https://pr-modonum.dndc.gouv.ml/.*
+
+alfresco_host: a-v-et-pr-001.dndc.intranet
+alfresco_port: 8380
+
+alfresco_url: http://{{ alfresco_host }}:{{ alfresco_port }}
+
+solr_host: a-v-et-pr-002.dndc.intranet
+solr_port: 8083
+
+edms_user_first_name: "SITFI"
+edms_user_last_name: "Admin"
+
+edms_admin_user: "admin"
+edms_admin_password: "{{ vault_edms_admin_password }}"
+
+edms_user: "pr-sitfi@dndc.intranet"
+edms_user_role: "SiteManager"
+edms_password: "{{ vault_edms_password }}"
+
+edms_site_id: foncier
+edms_site_title: SITFI Pre-production
+edms_site_description: "SITFI Pre-production"
+edms_alfresco_folder: foncierEdmsDocuments
+
+edms_db_host: a-v-db-pr-003.dndc.intranet
+edms_db_port: 5436
+edms_db_pass: "{{ vault_edms_db_pass }}"
+
+alfresco_xms: 2g
+alfresco_xmx: 4g
+
+share_xms: 512m
+share_xmx: 1g
+
+solr_xms: 6g
+solr_xmx: 12g
+
+
+etc_save_hosts:
+    - name: "{{ ansible_ssh_host }}"
+      ip: 127.0.0.1
+
+# /etc/resolv.conf values
+dns_resolv_searchpath:
+  - 'dndc.intranet'
+
+
+dns_server_list:
+  - 10.250.29.3
+  - 10.250.29.4
+  - 8.8.8.8
+  - 8.8.4.4
+
+
+#Docker logs filebeat vars
+docker_log_path: "/var/lib/docker/containers/*/*.log"
+docker_conatiner_log_name: "fon"
+
+#System logs filebeat vars:
+system_log_path: "/var/log/*.log"

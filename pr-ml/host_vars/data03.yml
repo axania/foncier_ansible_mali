@@ -1,0 +1,13 @@
+---
+
+full_hostname: A-V-DB-PR-003.dndc.intranet
+
+# feature flags - stuff we want to be present
+jenkins_slave_node: false
+node_installed: false #we build in the vm too
+is_maven_server: false
+is_sonar_enabled: false
+
+available_docker_services:
+  - alfresco-db
+  - datadog

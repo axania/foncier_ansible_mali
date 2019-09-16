@@ -1,0 +1,134 @@
+---
+
+#Docker Installed version
+docker_compose_version: 1.21.2
+docker_ce_version: 18.03.1~ce-0~ubuntu
+
+docker_registry: "{{ vault_docker_registry }}"
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
+
+#Docker Containers Deployed
+pull_images: no
+foncier_ui_image_version: 0.20.0
+foncier_api_image_version: 0.20.0
+foncier_wf_image_version: "7.8.13-ee-sogema"
+foncier_rules_api_image_version: dev
+foncier_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
+
+#Feature Flags
+is_datadog_on_docker: True
+is_swarm_mode_enabled: False
+is_docker_prospector_enabled: False
+is_keycloak_enabled: True
+
+#start - linked to docker compose vars
+db_host: "A-V-DB-PR-001.dndc.intranet"
+db_port: 5432
+
+db_user: "{{ vault_db_user }}"
+db_pass: "{{ vault_db_pass }}"
+db_name: sogema
+
+#api
+api_host: "A-V-WT-PR-002.dndc.intranet"
+api_port: 8280
+
+#camunda
+camunda_host: "A-V-WT-PR-007.dndc.intranet"
+camunda_port: 8581
+camunda_enginerest_url: "http://a-v-wt-pr-001.dndc.intranet:4200/workflowApi/engine-rest/"
+
+#edms - environment
+edms_user: "pr-sitfi@dndc.intranet"
+edms_password: "{{ vault_edms_password }}"
+edms_domain: "a-v-et-pr-001.dndc.intranet:8380"
+edms_source: "ALFRESCO"
+edms_enabled: 'true'
+edms_temp_file_directory: "src/main/resources/tempFiles"
+edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocuments"
+edms_sharepoint_site: "/sites/dev.foncier"
+edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
+edms_microsoft_sts_url: "https://login.microsoftonline.com/extSTS.srf"
+edms_alfresco_site: "foncier"
+edms_alfresco_folder: "/foncierEdmsDocuments"
+edms_alfresco_container: "documentLibrary"
+
+#mail - environment
+mail_host: "10.250.29.50"
+mail_port: "25"
+mail_username: ""
+mail_from: "nepasrepondre@dndc.gouv.ml"
+mail_password: ""
+mail_protocol: "smtp"
+mail_defaultencoding: "UTF-8"
+mail_smtp_auth_enabled: 'false'
+mail_tls_enabled: "false"
+mail_debug: "false"
+
+rules_base_url: "http://A-V-WT-PR-008.dndc.intranet:8082/foncier-rules-api/api/"
+rules_default_tran_type: "tran1"
+rules_default_tran_version: "1"
+rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
+rules_endpoints_party: "transaction/type/{tranType}/version/{tranVer}/validate/party"
+rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/validate/partyGroup"
+rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
+
+#keycloak - environment
+keycloak_auth_server_url: "http://pr-sitfi.dndc.gouv.ml/auth"
+keycloak_realm: "prsitfi"
+keycloak_ssl_required: "external"
+
+#keycloak camunda integration
+keycloak_wf_client: "foncier-camunda"
+keycloak_wf_realm_public_key: "{{ vault_keycloak_wf_realm_public_key }}" 
+
+#keycloak foncier api integration
+keycloak_api_client: "foncier-api"
+keycloak_api_client_secret: "{{ vault_keycloak_api_client_secret }}"
+keycloak_api_client_role: "all-api-access"
+keycloak_api_username: "{{ vault_keycloak_api_username }}"
+keycloak_api_password: "{{ vault_keycloak_api_password }}"
+
+#keycloak foncier ui integration
+keycloak_ui_client: "foncier-ui"
+
+#mali
+mali_folios_per_volume: "200"
+
+#foncier rules api
+drools_workbench_user: "admin"
+drools_workbench_pass: "{{ vault_drools_workbench_pass }}"
+
+logs_level: "INFO"
+hibernate_show_sql: 'false'
+hibernate_logs: "INFO"
+keycloak_logs: "INFO"
+spring_logs: "INFO"
+
+#swagger
+swagger_username: "superuser"
+swagger_password: "Test1234"
+swagger_role: "USER"
+
+etc_save_hosts:
+    - name: "{{ ansible_ssh_host }}"
+      ip: 127.0.0.1
+
+# /etc/resolv.conf values
+dns_resolv_searchpath:
+  - 'dndc.intranet'
+
+dns_server_list:
+  - 10.250.29.3
+  - 10.250.29.4
+  - 8.8.8.8
+  - 8.8.4.4
+
+#Docker logs filebeat vars
+docker_log_path: "/var/lib/docker/containers/*/*.log"
+docker_conatiner_log_name: "fon"
+
+#System logs filebeat vars:
+system_log_path: "/var/log/*.log"
