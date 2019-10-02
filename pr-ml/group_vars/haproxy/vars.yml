@@ -8,6 +8,7 @@ docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 docker_email: "jenkins@sti.systems"
+docker_log_driver: "journald"
 
 #Docker Containers Deployed
 pull_images: no
