@@ -110,16 +110,18 @@ mali_folios_per_volume: "200"
 drools_workbench_user: "admin"
 drools_workbench_pass: "{{ vault_drools_workbench_pass }}"
 
+#com.sogematech log level
 logs_level: "INFO"
-hibernate_show_sql: 'false'
+hibernate_show_sql: "false"
 hibernate_logs: "INFO"
 keycloak_logs: "INFO"
 spring_logs: "INFO"
 
 #swagger
 swagger_username: "superuser"
-swagger_password: "Test1234"
+swagger_password: "{{ vault_swagger_password }}"
 swagger_role: "USER"
+swagger_enable: "true"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
