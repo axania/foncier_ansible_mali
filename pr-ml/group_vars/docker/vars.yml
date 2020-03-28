@@ -144,8 +144,12 @@ docker_conatiner_log_name: "fon"
 #System logs filebeat vars:
 system_log_path: "/var/log/*.log"
 
+#Sigtas services
 sigtas_baseurl: "http://A-V-WT-PR-005.dndc.intranet:9767/services"    
       
+#Sigtas UI      
 sigtas_ui_domain: http://A-V-WB-PR-001.dndc.intranet:8080
+sigtas_ui_path: eldmliuat/
 
+#User Guides
 user_guide_url: http://dev-sig-docs01.eastus2.cloudapp.azure.com/fr/agent_guide
