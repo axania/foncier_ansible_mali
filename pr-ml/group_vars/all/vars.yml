@@ -4,6 +4,21 @@ environment_name: pr-ml-fon
 ansible_ssh_user: "{{ vault_ansible_ssh_user }}"
 ansible_ssh_pass: "{{ vault_ansible_ssh_pass }}"
 
+#Backups
+backup_server_host: a-v-bk-pp-001.dndc.intranet
+backup_server_folder: /u01
+backup_client_folder: /mnt/backups
+backup_schedule: "@daily"
+backup_keep_days: 3
+backup_keep_weeks: 4
+backup_keep_months: 1
+
+#for docker groups
+docker_registry: "{{ vault_docker_registry }}"
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
+
 #from Datadog role variables
 dd_enabled: yes
 datadog_installed: True

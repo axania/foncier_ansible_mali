@@ -10,4 +10,5 @@ is_sonar_enabled: False
 
 available_docker_services:
   - foncier-db
+  - foncier-db-backup
   - datadog

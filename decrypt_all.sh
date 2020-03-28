@@ -1,7 +1,7 @@
 #!/bin/bash
 
-declare -a env=("tr-ml")
-declare -a group=("all" "docker" "alfresco" "haproxy")
+declare -a env=("tr-ml" "prd-ml" "pr-ml") 
+declare -a group=("all" "docker" "alfresco" "haproxy" "jasper")
 
 ## now loop through the above array
 for i in "${env[@]}"

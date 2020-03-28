@@ -2,12 +2,15 @@
 lb01 ansible_ssh_host=A-V-EC-PR-001.dndc.intranet
 worker01 ansible_ssh_host=A-V-WT-PR-001.dndc.intranet
 worker02 ansible_ssh_host=A-V-WT-PR-002.dndc.intranet
+
 worker03 ansible_ssh_host=A-V-WT-PR-003.dndc.intranet
+
 worker05 ansible_ssh_host=A-V-WT-PR-005.dndc.intranet #property api of sigtas
-worker07 ansible_ssh_host=A-V-WT-PR-007.dndc.intranet #rules disabled
-worker08 ansible_ssh_host=A-V-WT-PR-008.dndc.intranet
 
 tdv01 ansible_ssh_host=A-V-RT-PR-001.dndc.intranet
+
+worker07 ansible_ssh_host=A-V-WT-PR-007.dndc.intranet
+worker08 ansible_ssh_host=A-V-WT-PR-008.dndc.intranet
 
 
 ged01 ansible_ssh_host=A-V-ET-PR-001.dndc.intranet
@@ -20,11 +23,10 @@ data04 ansible_ssh_host=A-V-DB-PR-004.dndc.intranet
 [docker]
 worker01
 worker02
-worker07
-data01
-
-[property-api]
 worker05
+worker07
+worker08
+data01
 
 [alfresco]
 ged01
@@ -44,9 +46,8 @@ lb01
 docker
 alfresco
 haproxy
-jasper
+jasper 
 tdv
-property-api
 
 [datacenter:vars]
 ansible_ssh_user={{vault_ansible_ssh_user}}

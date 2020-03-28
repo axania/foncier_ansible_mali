@@ -1,0 +1,12 @@
+---
+
+full_hostname: A-V-WT-PR-003.dndc.intranet
+
+available_docker_services:
+  - datadog
+  - jasperserver-pro
+  - jasperserver-pro-db
+
+
+
+

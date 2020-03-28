@@ -1,11 +1,20 @@
 # Foncier Ansible Variables (and Inventory) for Mali environments #
 
 
+
 ### What is this repository for? ###
 
 * Contains the inventory and variables of Mali controlled environments. 
 * Meant to be used along with [foncier__ansible](https://bitbucket.org/ucis/foncier_ansible/) project.
 
+### Naming Conventions ###
+This env has its own naming convention for the VMs. 
+
+* FO - formation
+* PP - production
+* PR - preproduction
+
+Please contact Jacques.Durand@cowater.com to obtain the full "nomenclature" excel file.
 
 ### How do I get set up? ###
 

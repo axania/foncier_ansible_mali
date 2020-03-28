@@ -8,7 +8,6 @@ docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 docker_email: "jenkins@sti.systems"
-docker_log_driver: "journald"
 
 #Docker Containers Deployed
 pull_images: no
@@ -43,19 +42,19 @@ edms_user_role: "SiteManager"
 edms_password: "{{ vault_edms_password }}"
 
 edms_site_id: foncier
-edms_site_title: SITFI Pre-production
-edms_site_description: "SITFI Pre-production"
+edms_site_title: SITFI
+edms_site_description: "SITFI"
 edms_alfresco_folder: foncierEdmsDocuments
 
 edms_db_host: a-v-db-pr-003.dndc.intranet
 edms_db_port: 5436
 edms_db_pass: "{{ vault_edms_db_pass }}"
 
-alfresco_xms: 2g
-alfresco_xmx: 4g
+alfresco_xms: 12g
+alfresco_xmx: 24g
 
 share_xms: 512m
-share_xmx: 1g
+share_xmx: 2g
 
 solr_xms: 6g
 solr_xmx: 12g

@@ -10,4 +10,5 @@ is_sonar_enabled: false
 
 available_docker_services:
   - alfresco-db
+  - alfresco-db-backup
   - datadog

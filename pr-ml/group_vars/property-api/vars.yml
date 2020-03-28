@@ -16,7 +16,15 @@ pull_images: no
 is_datadog_on_docker: True
 is_swarm_mode_enabled: False
 is_docker_prospector_enabled: False
+is_keycloak_enabled: True
 
+#start - linked to docker compose vars
+oracle_host: "A-V-DB-PR-006.dndc.intranet"
+oracle_port: 5432
+oracle_user: sigtasad
+oracle_pwd: Oracle2011
+oracle_db: sgtbsef
+wso2_logging_level: INFO
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
@@ -38,15 +46,3 @@ docker_container_log_name: "fon"
 
 #System logs filebeat vars:
 system_log_path: "/var/log/*.log"
-
-
-###HAProxy
-alfresco_host: "a-v-et-pr-001.dndc.intranet"
-alfresco_port: "8080"
-
-keycloak_host: "a-v-wt-pr-004.dndc.intranet"
-keycloak_port: "8080"
-
-ui_host: "a-v-wt-pr-001.dndc.intranet"
-ui_port: "4200"
-

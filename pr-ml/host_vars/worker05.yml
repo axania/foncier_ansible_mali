@@ -1,0 +1,12 @@
+---
+
+full_hostname: A-V-WT-PR-005.dndc.intranet
+
+available_docker_services:
+  - datadog
+  - property-api
+  - property-api-db
+
+
+
+

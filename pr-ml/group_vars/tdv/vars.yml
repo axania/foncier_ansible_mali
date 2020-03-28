@@ -1,0 +1,11 @@
+
+ansible_ssh_user: "{{ vault_ansible_ssh_user }}"
+ansible_ssh_pass: "{{ vault_ansible_ssh_pass }}"
+
+install_directory: /u01/TIBCO/TDV
+server_port: 9400
+repository_admin_password: "{{ vault_repository_admin_password }}"
+database_admin_password: "{{ vault_database_admin_password }}"
+server_admin_password: "{{ vault_server_admin_password }}"
+encryption_password: "{{ vault_encryption_password }}"
+unique_Id: 5a716117c145d5758a002dd3c056e5bc

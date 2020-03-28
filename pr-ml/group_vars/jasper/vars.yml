@@ -1,0 +1,14 @@
+---
+
+#Docker Installed version
+docker_compose_version: 1.24.1
+docker_ce_version: 18.06.3~ce~3-0~ubuntu
+
+jasper_http_port: 8080
+
+jasper_db_host: jasperserver-pro-db #using local container within the same host host.docker.internal
+jasper_db_name: jasperserver
+jasper_db_user: postgres
+jasper_db_password: "{{ vault_jasper_db_password }}"
+
+pull_images: yes #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)

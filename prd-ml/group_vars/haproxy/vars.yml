@@ -42,6 +42,8 @@ system_log_path: "/var/log/*.log"
 
 
 ###HAProxy
+pem_artifact: "sitfi.dndc.gouv.ml.pem"
+
 alfresco_host: "a-v-et-pp-001.dndc.intranet"
 alfresco_port: "8080"
 

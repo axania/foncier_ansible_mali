@@ -8,13 +8,12 @@ docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 docker_email: "jenkins@sti.systems"
-docker_log_driver: "journald"
 
 #Docker Containers Deployed
 pull_images: no
-foncier_ui_image_version: 0.20.0
-foncier_api_image_version: 0.20.0
-foncier_wf_image_version: "7.8.13-ee-sogema"
+foncier_ui_image_version: 0.21.0
+foncier_api_image_version: 0.21.0
+foncier_wf_image_version: "7.8.13-ee-fr"
 foncier_rules_api_image_version: dev
 foncier_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
 
@@ -39,7 +38,9 @@ api_port: 8280
 #camunda
 camunda_host: "A-V-WT-PR-007.dndc.intranet"
 camunda_port: 8581
-camunda_enginerest_url: "http://a-v-wt-pr-001.dndc.intranet:4200/workflowApi/engine-rest/"
+camunda_enginerest_url: "http://a-v-wt-pr-001.dndc.intranet:4200/workflowApi/engine-rest/" #it is using the nginx from worker01!
+workflow_url: http://A-V-WT-PR-007.dndc.intranet:8581
+
 
 #edms - environment
 edms_user: "pr-sitfi@dndc.intranet"
@@ -55,6 +56,13 @@ edms_microsoft_sts_url: "https://login.microsoftonline.com/extSTS.srf"
 edms_alfresco_site: "foncier"
 edms_alfresco_folder: "/foncierEdmsDocuments"
 edms_alfresco_container: "documentLibrary"
+
+#jasper - environment
+jasper_protocol: "http://"
+jasper_server: "A-V-WT-PR-003.dndc.intranet"
+jasper_port: "8080"
+jasper_user: "{{vault_jasper_user}}"
+jasper_password: "{{vault_jasper_password}}"
 
 #mail - environment
 mail_host: "10.250.29.50"
@@ -133,3 +141,9 @@ docker_conatiner_log_name: "fon"
 
 #System logs filebeat vars:
 system_log_path: "/var/log/*.log"
+
+sigtas_baseurl: "http://A-V-WT-PR-005.dndc.intranet:9767/services"    
+      
+sigtas_ui_domain: http://A-V-WB-PR-001.dndc.intranet:8080
+
+user_guide_url: http://dev-sig-docs01.eastus2.cloudapp.azure.com/fr/agent_guide
