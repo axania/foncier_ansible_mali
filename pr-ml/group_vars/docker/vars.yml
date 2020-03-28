@@ -11,8 +11,8 @@ docker_email: "jenkins@sti.systems"
 
 #Docker Containers Deployed
 pull_images: no
-foncier_ui_image_version: 0.21.0
-foncier_api_image_version: 0.21.0
+foncier_ui_image_version: 0.22.0
+foncier_api_image_version: 0.22.0
 foncier_wf_image_version: "7.8.13-ee-fr"
 foncier_rules_api_image_version: dev
 foncier_data_disk: /u01 #the mountpoint in the OS disk accorded with DND
